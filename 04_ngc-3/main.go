@@ -9,8 +9,8 @@ func main() {
 	// looping 1
 	var people []map[string]string
 	people = append(people, map[string]string{"name": "Hank", "age": "50", "Job": "Polisi"})
-	people = append(people, map[string]string{"name": "Heisenberg", "age": "M", "Job": "Ilmuwan"})
-	people = append(people, map[string]string{"name": "Skyler", "age": "F", "Job": "Akuntan"})
+	people = append(people, map[string]string{"name": "Heisenberg", "age": "52", "Job": "Ilmuwan"})
+	people = append(people, map[string]string{"name": "Skyler", "age": "48", "Job": "Akuntan"})
 
 	for _, maps := range people {
 		fmt.Printf("Hi Perkenalkan, Nama saya %s, umur saya %s, dan saya bekerja sebagai %s\n", maps["name"], maps["age"], maps["Job"])
@@ -24,11 +24,11 @@ func main() {
 	count(slice2)
 
 	// logic 1 - palindrome
-	kata := "door"
+	kata := "katak"
 	fmt.Println(palindrome(kata))
 
 	// logic 2 - xoxo
-	test := "xoxoxo"
+	test := "xoxo"
 	fmt.Println(xoxo(test))
 
 	// logic 3 - sort
@@ -42,12 +42,13 @@ func main() {
 	asterisk2(5)
 
 	// logic 5 - asterisk 3
-	asterisk3(5)
+	asterisk3(10)
 
 	// logic 5 - asterisk 4
 	asterisk4(5)
 }
 
+// looping 2
 func count(slice []float64) {
 	var avg, sum, med float64
 	length := len(slice)
@@ -62,7 +63,7 @@ func count(slice []float64) {
 	} else {
 		med = slice[length/2]
 	}
-	fmt.Printf("sum = %f, avg = %f, med = %f\n", sum, avg, med)
+	fmt.Printf("sum = %f, avg = %.2f, med = %f\n", sum, avg, med)
 }
 
 func palindrome(kata string) bool {
@@ -109,7 +110,7 @@ func bubble(s []int) []int {
 }
 
 func asterisk1(rows int) {
-	for i := 1; i <= rows; i++ {
+	for i := 0; i < rows; i++ {
 		fmt.Println("*")
 	}
 }
@@ -134,7 +135,7 @@ func asterisk3(rowcl int) {
 
 func asterisk4(rowcl int) {
 	for i := 1; i <= rowcl; i++ {
-		for j := 1; j <= rowcl-i; j++ {
+		for j := 0; j <= rowcl-i; j++ {
 			fmt.Print("*")
 		}
 		fmt.Println("")
