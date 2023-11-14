@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"os"
 )
 
 func main() {
@@ -32,19 +31,21 @@ func main() {
 	fmt.Println("\nMasukkan nama:")
 	fmt.Scan(&nama2)
 	fmt.Println("Masukkan umur:")
-	fmt.Scan(&umur)
+	_, err := fmt.Scan(&umur)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 
 	if umur < 0 || umur > 100 {
 		fmt.Println("ERROR invalid age")
-		os.Exit(1)
+		return
 	}
 
 	switch {
 	case umur > 18:
 		fmt.Println("Silahkan masuk")
 	case umur <= 18:
-		fmt.Println("Dilarang masuk, maksimal umur 19")
-	default:
-		fmt.Println("ERROR bukan angka")
+		fmt.Println("Dilarang masuk, minimal umur 19")
 	}
 }
