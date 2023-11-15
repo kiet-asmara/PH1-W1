@@ -13,29 +13,29 @@ type Person struct {
 
 func main() {
 	// soal 1
-	// john := Person{
-	// 	name: "john",
-	// 	age:  45,
-	// 	job:  "Gambler",
-	// }
-	// john.AddYear()
-	// john.AddYear()
-	// john.AddYear()
-	// john.AddYear()
-	// john.AddYear()
-	// john.GetInfo()
+	john := Person{
+		name: "john",
+		age:  45,
+		job:  "Gambler",
+	}
+	john.AddYear()
+	john.AddYear()
+	john.AddYear()
+	john.AddYear()
+	john.AddYear()
+	john.GetInfo()
 
 	// soal 2
-	// var sliceOfPerson = []Person{
-	// 	john,
-	// 	{name: "james", age: 34, job: "farmer"},
-	// 	{name: "joni", age: 30, job: "doctor"},
-	// 	{name: "jane", age: 20, job: "nurse"},
-	// }
+	var sliceOfPerson = []Person{
+		john,
+		{name: "james", age: 34, job: "farmer"},
+		{name: "joni", age: 30, job: "doctor"},
+		{name: "jane", age: 20, job: "nurse"},
+	}
 
-	// for _, p := range sliceOfPerson {
-	// 	p.GetInfo()
-	// }
+	for _, p := range sliceOfPerson {
+		p.GetInfo()
+	}
 
 	// soal 3
 
@@ -47,7 +47,7 @@ func main() {
 		HP:         100,
 		Weapon:     rpg.Weapon{Name: "golok", Attack: 10},
 	}
-	// fmt.Printf("%s attacks with %d damage!\n", firstHero.Name, firstHero.CountDamage())
+	fmt.Printf("%s attacks with %d damage!\n", firstHero.Name, firstHero.CountDamage())
 
 	// soal 4
 	secondHero := rpg.Hero{
