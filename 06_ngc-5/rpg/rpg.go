@@ -23,6 +23,8 @@ type Weapon struct {
 // counts attack damage
 func (h Hero) CountDamage() int {
 	damage := h.BaseAttack + h.Weapon.Attack
+
+	// 50% critical chance
 	if rand.Intn(100)-1 > 50 {
 		damage += h.CritDamage
 	}
@@ -32,6 +34,7 @@ func (h Hero) CountDamage() int {
 // returns remaining HP
 func (h1 Hero) isAttackedBy(h2 Hero) int {
 	totalDmg := h2.CountDamage() - h1.Defence
+
 	if totalDmg <= 0 {
 		return h1.HP
 	} else {
