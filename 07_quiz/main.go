@@ -17,12 +17,15 @@ func main() {
 	nama := "joni"
 	umur := 20
 
+	fmt.Println("Print nama dan Umur:")
 	fmt.Println(nama)
 	fmt.Println(umur)
+	fmt.Println("")
 
 	// soal 2
 	// Buatlah sebuah map yang memiliki key berupa string (nama buah) dan value berupa float64 (harga per kilogram).
 	// Isi map tersebut dengan 3 data, lalu tampilkan datanya.
+	fmt.Println("Print map buah:")
 	buah := map[string]float64{
 		"Mangga": 20.12,
 		"Jambu":  16.20,
@@ -30,16 +33,19 @@ func main() {
 	}
 
 	fmt.Println(buah)
+	fmt.Println("")
 
 	// soal 3
 	// Gunakan struktur pengkondisian untuk memeriksa apakah suatu bilangan adalah bilangan genap atau ganjil.
 	bil := 9
 
+	fmt.Printf("Jika input adalah %d.\n", bil)
 	if bil%2 == 0 {
 		fmt.Println("Bilangan adalah genap")
 	} else {
 		fmt.Println("Bilangan adalah ganjil")
 	}
+	fmt.Println("")
 
 	// soal 4
 	// Tuliskan sebuah program yang menerima input angka bulan (1-12), dan mengembalikan nama bulan tersebut.
@@ -76,27 +82,30 @@ func main() {
 	default:
 		fmt.Println("Tidak ada bulan dengan angka itu.")
 	}
+	fmt.Println("")
 
 	// soal 5
 	// Tuliskan sebuah program yang mencetak angka dari 1 hingga 10 menggunakan loop.
+	fmt.Println("Cetak 1 sampai 10:")
 	for i := 1; i <= 10; i++ {
 		fmt.Println(i)
 	}
+	fmt.Println("")
 
 	// soal 6
 	// Buatlah program yang mencetak N suku pertama dari sebuah deret geometri dengan rasio 2.
 	var n int
 	fmt.Println("Masukkan panjang deret geometri 2:")
 	fmt.Scanln(&n)
-	var r float64
 	for i := 0; i < n; i++ {
-		r = math.Pow(2, float64(i))
+		fmt.Println(math.Pow(2, float64(i)))
 	}
-	fmt.Println(r)
+	fmt.Println("")
 
 	// soal 7
 	// Gunakan perulangan dan pengkondisian untuk mencetak angka dari 1 hingga 20,
 	// tetapi cetak "Fizz" untuk angka yang habis dibagi 3 dan "Buzz" untuk angka yang habis dibagi 5.
+	fmt.Println("Fizbuzz dari 1 hingga 20:")
 	for i := 1; i <= 20; i++ {
 		if i%15 == 0 {
 			fmt.Println("FizzBuzz")
@@ -108,6 +117,7 @@ func main() {
 			fmt.Println(i)
 		}
 	}
+	fmt.Println("")
 
 	// soal 8
 	// Tuliskan sebuah program yang mencetak bilangan dari 1 sampai N, tetapi untuk kelipatan 3 cetak "Fizz", untuk kelipatan 5 cetak "Buzz", dan untuk kelipatan keduanya cetak "FizzBuzz".
@@ -125,6 +135,7 @@ func main() {
 			fmt.Println(i)
 		}
 	}
+	fmt.Println("")
 
 	// soal 9
 	// Buatlah sebuah program yang mencetak pola kotak dengan lapisan luar terdiri dari karakter *,
@@ -132,6 +143,7 @@ func main() {
 	var st int
 	fmt.Println("Masukkan dimensi kotak kosong:")
 	fmt.Scanln(&st)
+	fmt.Println("")
 
 	for i := 1; i <= st; i++ {
 		if i == 1 || i == st {
@@ -149,10 +161,13 @@ func main() {
 		}
 		fmt.Print("\n")
 	}
+	fmt.Println("")
 
 	// soal 10
 	// Tuliskan sebuah program yang menggunakan nested loop untuk menghasilkan segitiga Pascal dengan tinggi 5 baris.
-	for i := 0; i < 5; i++ {
+	p := 5
+	fmt.Printf("Segitiga pascal dengan %d baris:\n", p)
+	for i := 0; i < p; i++ {
 		if i == 0 {
 			fmt.Println(1)
 		} else if i == 1 {
@@ -172,22 +187,30 @@ func main() {
 
 		}
 	}
+	fmt.Println("")
 
 	// soal 11
 	// Buatlah sebuah fungsi yang menerima dua bilangan dan mengembalikan jumlah dari kedua bilangan tersebut..
+	fmt.Println("Jumlah 2 bilangan:")
 	fmt.Println(duaBil(9, 2))
+	fmt.Println("")
 
 	// soal 12
 	// Buatlah sebuah fungsi yang menerima dua argumen (bilangan bulat) dan mengembalikan hasil penjumlahan dari kedua argumen tersebut.
 	fmt.Println(duaBilBulat(9, 2))
+	fmt.Println("")
 
 	// soal 13
 	// Buatlah sebuah fungsi variadic yang menerima sejumlah bilangan bulat dan mengembalikan jumlah dari semua bilangan tersebut.
+	fmt.Println("Jumlah bilangan dengan variadic function:")
 	fmt.Println(jumlahSemua(1, 2, 3, 4, 5))
+	fmt.Println("")
 
 	// soal 14
 	// Buatlah sebuah fungsi variadic yang menerima sejumlah bilangan bulat dan mengembalikan nilai maksimum dari sekumpulan bilangan tersebut.
+	fmt.Println("Nilai tertinggi:")
 	fmt.Println(maxSemua(1, 2, 3, 4, 5))
+	fmt.Println("")
 
 	// soal 15
 	// Anda memiliki struktur data yang mencakup informasi tentang buku yang terdiri dari judul, penulis, dan harga.
@@ -198,7 +221,9 @@ func main() {
 		{judul: "ramayana", penulis: "wisnu", harga: 200.12},
 	}
 
+	fmt.Println("Total harga semua buku:")
 	fmt.Printf("%.2f\n", totalHarga(buku))
+	fmt.Println("")
 
 	// soal 16
 	/*
@@ -213,10 +238,12 @@ func main() {
 	fmt.Println(hitungBonus("A", 100))
 	fmt.Println(hitungBonus("B", 100))
 	fmt.Println(hitungBonus("C", 100))
+	fmt.Println("")
 
 	// soal 17
 	// Buatlah program yang mencetak angka dari 1 hingga 100, namun untuk kelipatan 3 cetak "Fizz",
 	// untuk kelipatan 5 cetak "Buzz", dan untuk kelipatan dari 3 dan 5 cetak "FizzBuzz".
+	fmt.Println("Fizbuzz dari 1 hingga 100:")
 	for i := 1; i <= 100; i++ {
 		if i%15 == 0 {
 			fmt.Println("FizzBuzz")
@@ -228,12 +255,14 @@ func main() {
 			fmt.Println(i)
 		}
 	}
+	fmt.Println("")
 
 	// soal 18
 	// Buatlah program yang mencetak pola berlian dengan bintang (*) di tengah-tengah layar dengan menggunakan nested loop.
 	// Tinggi berlian (jumlah baris) adalah n (sebuah bilangan ganjil).
 	berlian := 9
 
+	fmt.Printf("Pola berlian dengan %d baris:\n\n", berlian)
 	median := (berlian + 1) / 2
 	for i := 0; i < median; i++ {
 		for j := 1; j <= berlian; j++ {
@@ -255,11 +284,14 @@ func main() {
 		}
 		fmt.Print("\n")
 	}
+	fmt.Println("")
 
 	// soal 19
 	// Buatlah fungsi variadic yang menerima sejumlah kata (string) dan mengembalikan sebuah kalimat di mana kata-kata tersebut disatukan dengan spasi.
 	// Fungsi juga harus mengembalikan jumlah kata yang telah disatukan.
+	fmt.Println("Gabungkan kata menjadi kalimat:")
 	fmt.Println(buildSentence("halo", "namaku", "joni", "jani"))
+	fmt.Println("")
 
 	// soal 20
 	/*
@@ -273,6 +305,8 @@ func main() {
 		Jika nilai siswa i lebih dari atau sama dengan 85, cetak "Siswa i mendapatkan predikat A".
 	*/
 	nilaiSiswa := []int{85, 60, 78, 92, 45, 73}
+
+	fmt.Println("Menentukan predikat nilai siswa:")
 	evaluasiKinerjaSiswa(nilaiSiswa)
 
 }
